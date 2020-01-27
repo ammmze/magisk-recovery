@@ -6,7 +6,7 @@ To use it...
 
 1) Restore your stock `boot.img`, so that you can boot your phone
 2) Open magisk manager settings and set the update channel to `https://raw.githubusercontent.com/ammmze/magisk-recovery/master/custom.json`
-3) On magisk home screen refresh it and it should show the `19.999` version as being the latest one. This is really Magisk 20.0 but patched to boot in Core Only
+3) On magisk home screen refresh it and it should show the `20.299` version as being the latest one. This is really Magisk 20.3+ (Built at commit fbe776db0bdfcbf3b1052381ca43382a61175aa5) but patched to boot in Core Only
 4) Install this custom magisk as normal and your phone should be able to boot with magisk in core only mode
 5) Disable/uninstall any magisk module(s) causing problems
 6) Set the update channel back to stable in magisk manager
@@ -41,12 +41,12 @@ The gist of the process is this:
 
 ### Clone the repo
 
-First you'll want to clone the repo and switch to the latest release tag (which currently is `v20.0`)...
+First you'll want to clone the repo and switch to the latest release tag (which currently is `v20.3+`)...
 
 ```bash
 git clone https://github.com/topjohnwu/Magisk.git
 cd Magisk
-git checkout v20.0
+git checkout v20.3+
 ```
 
 ### Environment variable locations
@@ -55,7 +55,7 @@ For me those environment variables look like this...
 
 ```bash
 export ANDROID_HOME=/Users/trogdor/Android/sdk
-export ANDROID_NDK_HOME=/Users/trogdor/Android/sdk/ndk/20.0.5594570
+export ANDROID_NDK_HOME=/Users/trogdor/Android/sdk/ndk/20.3+.5594570
 ```
 
 > You'll want to make sure there are no spaces in those paths. Initially I had a space in one of the directory names and at some point the build blew up on me.
@@ -72,7 +72,7 @@ In the end, here's what my `config.props` looked like:
 
 ```properties
 # The version name and version code of Magisk
-version=19.999
+version=20.299
 versionCode=19999
 
 # The version name and version code of Magisk Manager
@@ -141,10 +141,10 @@ Here's what my `custom.json` looks like:
     "note": "https://raw.githubusercontent.com/topjohnwu/Magisk/59fd38bbf810c81076a1f9b16bc5a0071581b9e7/app/src/main/res/raw/changelog.md"
   },
   "uninstaller": {
-    "link": "https://github.com/topjohnwu/Magisk/releases/download/v20.0/Magisk-uninstaller-20191011.zip"
+    "link": "https://github.com/topjohnwu/Magisk/releases/download/v20.3+/Magisk-uninstaller-20191011.zip"
   },
   "magisk": {
-    "version": "19.999",
+    "version": "20.299",
     "versionCode": "19999",
     "link": "http://192.168.0.117:8000/magisk-debug.zip",
     "note": "https://raw.githubusercontent.com/topjohnwu/magisk_files/2d7ddefbe4946806de1875a18247b724f5e7d4a0/notes.md",
